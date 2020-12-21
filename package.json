@@ -47,7 +47,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.5",
     "babel-polyfill": "^6.26.0",
-    "difflib": "git+git@github.com:fawazahmed0/difflib.js.git#58e960e",
+    "difflib": "git+https://github.com/fawazahmed0/difflib.js.git#58e960e",
     "docx": "^4.7.1",
     "draft-js": "^0.10.5",
     "everpolate": "0.0.3",
