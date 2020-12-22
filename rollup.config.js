@@ -1,9 +1,9 @@
 import postcss from "rollup-plugin-postcss";
-import babel, { getBabelOutputPlugin } from '@rollup/plugin-babel';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import analyze from 'rollup-plugin-analyzer'
 import { terser } from "rollup-plugin-terser";
+import esbuild from "rollup-plugin-esbuild";
 
 export default [
     {
@@ -12,7 +12,6 @@ export default [
             file: "output/TranscriptEditor.js",
             format: "es",
             plugins: [
-                getBabelOutputPlugin({presets: ["@babel/preset-env"]}),
                 terser()
             ]
         },
@@ -21,7 +20,11 @@ export default [
             postcss({
                 modules: true
             }),
-            babel({presets: ["@babel/preset-react"]}),
+            esbuild({
+                loaders: {
+                    ".js": "jsx",
+                }
+            }),
             nodeResolve(),
             commonjs(),
             // analyze({summaryOnly: true})
