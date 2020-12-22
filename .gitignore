@@ -114,3 +114,6 @@ stats.json
 *.vtt
 *.ttml
 *.itt
+
+# Rollup output
+/output/
