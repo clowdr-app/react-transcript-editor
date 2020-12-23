@@ -23,7 +23,7 @@ const exportAdapter = (blockData, exportFormat, transcriptTitle) => {
     return { data: draftToDigitalPaperEdit(blockData), ext: 'json' };
   case 'srt':
     var { words } = draftToDigitalPaperEdit(blockData);
-    const srtContent = subtitlesGenerator({ words, type: 'srt', numberOfCharPerLine: 35 });
+    const srtContent = subtitlesGenerator({ words, type: 'srt', numberOfCharPerLine: 30 });
 
     return { data: srtContent, ext: 'srt' };
 

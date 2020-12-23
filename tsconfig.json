@@ -1,0 +1,22 @@
+{
+    "include": ["packages/**/*.d.ts", "packages/**/*.ts", "packages/**/*.tsx", "types", "node_modules/@types"],
+    "exclude": ["./build", "./dist", "./output"],
+    "compilerOptions": {
+        "module": "esnext",
+        "target": "ES2016",
+        "moduleResolution": "node",
+        "jsx": "preserve",
+        "baseUrl": "./",
+        /* paths - If you configure Snowpack import aliases, add them here. */
+        "paths": {},
+        /* noEmit - Snowpack builds (emits) files, not tsc. */
+        "noEmit": true,
+        /* Additional Options */
+        "strict": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports": true,
+        "importsNotUsedAsValues": "error"
+    }
+}
