@@ -41,6 +41,9 @@ interface Word {
 }
 
 export default function srtToDraft({data: srtText}: {data: string}): Array<DraftJsContentBlockParagraph> {
+    if (!srtText || srtText.length === 0) {
+        return [];
+    }
     const nodes = parseSync(srtText);
     return nodes.map(node => {
         if (node.type !== "cue") {

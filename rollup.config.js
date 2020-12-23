@@ -15,7 +15,7 @@ export default [
                 terser()
             ]
         },
-        external: ["react", "react-dom"],
+        external: ["react", "react-dom", "react-is"],
         plugins: [
             postcss({
                 modules: true
